@@ -1,0 +1,13 @@
+ <div class="container">
+   <div class="border p-1 mb-2">
+   <div class= "d-flex justificy-content-center align-item-center p-1">
+     <span class="me-auto"><%= restaurant.name %></span>
+      <%= link_to restaurant_path(restaurant), data:{turbo_method: :delete}, class: "btn btn-danger me-2" do %>
+      <i class="fa-solid fa-trash"></i>
+      <% end %>
+      <%= link_to edit_restaurant_path(restaurant), class: "btn btn-warning" do %>
+      <i class="fa-solid fa-pencil"></i>
+      <% end %>
+    </div>
+   </div>
+ </div>
