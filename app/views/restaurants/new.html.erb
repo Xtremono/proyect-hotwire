@@ -1,3 +1,5 @@
 <div class="container mt-2">
+  <%= turbo_frame_tag "new_restaurant" do %>
   <%= render "restaurants/form", restaurant: @restaurant %>
+  <% end %>
 </div>

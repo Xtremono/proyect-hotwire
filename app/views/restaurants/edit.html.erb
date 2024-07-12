@@ -1,2 +1,3 @@
-<h1>Editar restaurant</h1>
+<%= turbo_frame_tag @restaurant do %>
 <%= render "restaurants/form", restaurant: @restaurant %>
+<% end %>
