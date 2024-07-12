@@ -32,8 +32,11 @@ class RestaurantsController < ApplicationController
   end
   def destroy
     @restaurant.destroy
-    redirect_to restaurants_path, status: :see_other, notice: "Restaurant deleted successfully."
+    respond_to do |format|
+    format.html { redirect_to restaurants_path, :see_other }
+    format.turbo_stream
   end
+end
 
   private
   def restaurant_params
