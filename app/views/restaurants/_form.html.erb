@@ -1,11 +1,10 @@
-<div class="container">
-  <%= simple_form_for @restaurant do |f| %>
-  <div class= "d-flex justify-content-between align-items-center">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.submit class: "btn btn-success" %>
-    <%= link_to "Cerrar", restaurants_path, class:"btn btn-secondary" %>
+<div class="container mt-3">
+  <%= simple_form_for restaurant do |f| %>
+  <div class= "d-flex align-items-center">
+    <div class="flex-grow-1"><%= f.input :name %></div>
+    <div class="flex-grow-1 me-1"><%= f.input :address %></div>
+    <%= f.submit restaurant.new_record? ? "Crear" : "Guardar", class: "btn btn-success mt-3 me-1" %>
+    <%= link_to "Cerrar", restaurants_path, class:"btn btn-secondary mt-3" %>
     </div>
-  </div>
   <% end %>
 </div>
